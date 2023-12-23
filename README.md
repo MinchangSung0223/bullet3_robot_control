@@ -18,3 +18,13 @@ sudo apt-get install libspdlog-dev
 1. https://github.com/MinchangSung0223/LieGroupRoboticsControl.git
 
 2. https://github.com/MinchangSung0223/SimRobot.git
+
+```bash
+  cd task_control/robust_control
+  mkdir build
+  cd build
+  cmake ..
+  make -j$(nproc)
+  ./RobustControl
+```
+![Uploading image.png…]()
