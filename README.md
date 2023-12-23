@@ -27,4 +27,5 @@ sudo apt-get install libspdlog-dev
   make -j$(nproc)
   ./RobustControl
 ```
-![Uploading image.png…]()
+![image](https://github.com/MinchangSung0223/bullet3_robot_control/assets/53217819/24c8ce3e-8152-4658-9fd2-54287e34c969)
+
