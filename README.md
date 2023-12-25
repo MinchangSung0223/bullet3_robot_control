@@ -20,12 +20,10 @@ sudo apt-get install libspdlog-dev
 2. https://github.com/MinchangSung0223/SimRobot.git
 
 ```bash
-  cd task_control/robust_control
   mkdir build
   cd build
   cmake ..
   make -j$(nproc)
-  ./RobustControl
 ```
 초록색 로봇 = 목표 위치
 ![image](https://github.com/MinchangSung0223/bullet3_robot_control/assets/53217819/24c8ce3e-8152-4658-9fd2-54287e34c969)
