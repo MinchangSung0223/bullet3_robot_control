@@ -10,24 +10,6 @@
   - 추후 추가
 
 
-# install
-실행하기 위해서 다음을 설치해야만 합니다.
-```bash
-sudo apt-get install libspdlog-dev
-```
-1. https://github.com/MinchangSung0223/LieGroupRoboticsControl.git
-
-2. https://github.com/MinchangSung0223/SimRobot.git
-
-```bash
-  mkdir build
-  cd build
-  cmake ..
-  make -j$(nproc)
-```
-초록색 로봇 = 목표 위치
-![image](https://github.com/MinchangSung0223/bullet3_robot_control/assets/53217819/24c8ce3e-8152-4658-9fd2-54287e34c969)
-
 
 # 설치 방법 상세 설명
 1. wsl 설치 (Windows11인 경우만) [설치방법](https://learn.microsoft.com/ko-kr/windows/wsl/install)
@@ -114,4 +96,15 @@ Bullet3용 Simulation Robot을 설정하는 라이브러리입니다.
   make -j$(nproc)
   sudo make install
 ```
-11. 
+11. bullet3_robot_control 설치
+실행하기 위해서 다음을 설치해야만 합니다.
+
+```bash
+  mkdir build
+  cd build
+  cmake ..
+  make -j$(nproc)
+```
+초록색 로봇 = 목표 위치
+![image](https://github.com/MinchangSung0223/bullet3_robot_control/assets/53217819/24c8ce3e-8152-4658-9fd2-54287e34c969)
+
