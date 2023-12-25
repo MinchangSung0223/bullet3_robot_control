@@ -75,7 +75,21 @@ ruckig는 Scurve Trajectory 생성용 라이브러리입니다.
    cd /opt
    sudo  ln -s $RUCKIG_HOME .
 ```
-8. LieGroupRoboticsControl install
+
+8. Bullet3 install
+```bash
+   git clone https://github.com/bulletphysics/bullet3.git
+   cd bullet3
+   export BULLET_DIR=$PWD
+   sudo ./build_cmake_pybullet_double.sh
+   cd build_cmake
+   sudo make install
+   cd /opt
+   sudo ln -s ${BULLET_DIR} .
+```
+
+
+9. LieGroupRoboticsControl install
 
 Controller와 LieGroup연산을 수행하는 라이브러리입니다.
 ```bash
