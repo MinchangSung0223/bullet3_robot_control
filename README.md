@@ -11,7 +11,7 @@
 
 
 
-## 설치 방법 상세 설명
+## 설치 방법
 1. wsl 설치 (Windows11인 경우만) [설치방법](https://learn.microsoft.com/ko-kr/windows/wsl/install)
 2. Ubuntu 20.04.6 설치
 3. 기본 라이브러리 설치
