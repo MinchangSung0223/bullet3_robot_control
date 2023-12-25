@@ -1,5 +1,9 @@
 # bullet3_robot_control
 이 repository는 bullet3을 이용한 c++ robot control 예제를 제공합니다.
+bullet3은 MassMatrix과 inverseDynamics는 계산할 수 있지만 CoriolisMatrix을 계산해주지 않습니다. 
+Robust Control을 위해 동역학 게산은 Pinocchio 라이브러리를 이용했습니다.
+
+초록색 로봇은 로봇의 목표위치를 의미합니다. 
 
 - Joint Control
   - Computed Torque Control
