@@ -33,12 +33,15 @@ sudo apt-get install libspdlog-dev
 1. wsl 설치 (Windows11인 경우만) [설치방법](https://learn.microsoft.com/ko-kr/windows/wsl/install)
 2. Ubuntu 20.04.6 설치
 3. 기본 라이브러리 설치
+   
 ```bash
    sudo apt-get update
    sudo apt-get install -y build-essential cmake git
    sudo apt-get install libeigen3-dev liburdfdom-dev
 ```
 5. robotpkg install
+   
+pinocchio를 사용하기 위한 라이브러리입니다.
 http://robotpkg.openrobots.org/debian.html
 ```bash
   sudo mkdir -p /etc/apt/keyrings
@@ -50,7 +53,11 @@ http://robotpkg.openrobots.org/debian.html
   deb [arch=amd64 signed-by=/etc/apt/keyrings/robotpkg.asc] http://robotpkg.openrobots.org/packages/debian/pub focal robotpkg
   EOF
 ```
+
 6. pinocchio install
+   
+pinocchio는 Robot Dynamics 해석용 라이브러리입니다. M, C, G를 계산합니다.
+
 https://stack-of-tasks.github.io/pinocchio/download.html
 ```bash
    sudo apt install -qqy lsb-release curl
@@ -68,6 +75,8 @@ https://stack-of-tasks.github.io/pinocchio/download.html
          export CMAKE_PREFIX_PATH=/opt/openrobots:$CMAKE_PREFIX_PATH' >> ~/.bashrc
 ```
 7. ruckig install
+   
+ruckig는 Scurve Trajectory 생성용 라이브러리입니다. 
 ```bash
    git clone https://github.com/pantor/ruckig.git
    cd ruckig
@@ -81,6 +90,8 @@ https://stack-of-tasks.github.io/pinocchio/download.html
    sudo  ln -s $RUCKIG_HOME .
 ```
 8. LieGroupRoboticsControl install
+
+Controller와 LieGroup연산을 수행하는 라이브러리입니다.
 ```bash
   git clone https://github.com/MinchangSung0223/LieGroupRoboticsControl.git
   cd LieGroupRoboticsControl
@@ -92,6 +103,8 @@ https://stack-of-tasks.github.io/pinocchio/download.html
 ```
 
 10. SimRobot install
+
+Bullet3용 Simulation Robot을 설정하는 라이브러리입니다.
 ```bash
   git clone https://github.com/MinchangSung0223/SimRobot.git
   cd SimRobot
