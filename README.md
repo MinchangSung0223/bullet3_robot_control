@@ -28,3 +28,77 @@ sudo apt-get install libspdlog-dev
 초록색 로봇 = 목표 위치
 ![image](https://github.com/MinchangSung0223/bullet3_robot_control/assets/53217819/24c8ce3e-8152-4658-9fd2-54287e34c969)
 
+
+# 설치 방법 상세 설명
+1. wsl 설치 (Windows11인 경우만) [설치방법](https://learn.microsoft.com/ko-kr/windows/wsl/install)
+2. Ubuntu 20.04.6 설치
+3. 기본 라이브러리 설치
+```bash
+   sudo apt-get update
+   sudo apt-get install -y build-essential cmake git
+   sudo apt-get install libeigen3-dev liburdfdom-dev
+```
+5. robotpkg install
+http://robotpkg.openrobots.org/debian.html
+```bash
+  sudo mkdir -p /etc/apt/keyrings
+  
+  curl http://robotpkg.openrobots.org/packages/debian/robotpkg.asc |
+     sudo tee /etc/apt/keyrings/robotpkg.asc
+  
+  sudo tee /etc/apt/sources.list.d/robotpkg.list <<EOF
+  deb [arch=amd64 signed-by=/etc/apt/keyrings/robotpkg.asc] http://robotpkg.openrobots.org/packages/debian/pub focal robotpkg
+  EOF
+```
+6. pinocchio install
+https://stack-of-tasks.github.io/pinocchio/download.html
+```bash
+   sudo apt install -qqy lsb-release curl
+   sudo mkdir -p /etc/apt/keyrings
+   curl http://robotpkg.openrobots.org/packages/debian/robotpkg.asc \
+       | sudo tee /etc/apt/keyrings/robotpkg.asc
+   echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/robotpkg.asc] http://robotpkg.openrobots.org/packages/debian/pub $(lsb_release -cs) robotpkg" \
+       | sudo tee /etc/apt/sources.list.d/robotpkg.list
+   sudo apt update
+   sudo apt install -qqy robotpkg-py3*-pinocchio
+   echo 'export PATH=/opt/openrobots/bin:$PATH
+         export PKG_CONFIG_PATH=/opt/openrobots/lib/pkgconfig:$PKG_CONFIG_PATH
+         export LD_LIBRARY_PATH=/opt/openrobots/lib:$LD_LIBRARY_PATH
+         export PYTHONPATH=/opt/openrobots/lib/python3.8/site-packages:$PYTHONPATH # Adapt your desired python version here
+         export CMAKE_PREFIX_PATH=/opt/openrobots:$CMAKE_PREFIX_PATH' >> ~/.bashrc
+```
+7. ruckig install
+```bash
+   git clone https://github.com/pantor/ruckig.git
+   cd ruckig
+   export RUCKIG_HOME=$PWD
+   mkdir build
+   cd build
+   cmake ..
+   make -j$(nproc)
+   sudo make install
+   cd /opt
+   sudo  ln -s $RUCKIG_HOME .
+```
+8. LieGroupRoboticsControl install
+```bash
+  git clone https://github.com/MinchangSung0223/LieGroupRoboticsControl.git
+  cd LieGroupRoboticsControl
+  mkdir build
+  cd build
+  cmake ..
+  make -j$(nproc)
+  sudo make install
+```
+
+10. SimRobot install
+```bash
+  git clone https://github.com/MinchangSung0223/SimRobot.git
+  cd SimRobot
+  mkdir build
+  cd build
+  cmake ..
+  make -j$(nproc)
+  sudo make install
+```
+11. 
