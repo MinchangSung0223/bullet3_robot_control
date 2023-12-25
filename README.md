@@ -1,5 +1,5 @@
 # bullet3_robot_control
-이 repository는 bullet3을 이용한 robot control 예제를 제공합니다.
+이 repository는 bullet3을 이용한 c++ robot control 예제를 제공합니다.
 
 - Joint Control
   - Computed Torque Control
