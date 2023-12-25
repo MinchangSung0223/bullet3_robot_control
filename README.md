@@ -23,7 +23,7 @@ Robust Control을 위해 동역학 게산은 Pinocchio 라이브러리를 이용
 ```bash
    sudo apt-get update
    sudo apt-get install -y build-essential cmake git
-   sudo apt-get install libeigen3-dev liburdfdom-dev
+   sudo apt-get install libeigen3-dev liburdfdom-dev libjsoncpp-dev libspdlog-dev
 ```
 5. robotpkg install
    
