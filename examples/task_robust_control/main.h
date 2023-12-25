@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <pthread.h>
-#include <LR/LR_Control.h>
+#include <LR/include/LR_Control.h>
 #include <SimRobot/Robot.h>
 #include <RobotSimulator/b3RobotSimulatorClientAPI.h>
 #define MS_TO_US 1000000
